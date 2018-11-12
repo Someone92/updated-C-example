@@ -1,0 +1,13 @@
+<div class="login">
+	<h1><img src="assets/img/combitech-logo.svg"></h1>
+	<form [formGroup]="loginForm" (ngSubmit)="login()">
+		<div class="field">
+			<input type="email" placeholder="email@website.com" formControlName="email">
+		</div>
+		<div class="field">
+			<input type="password" placeholder="password" formControlName="password">
+		</div>
+		<button class="button button-auth" type="submit" [disabled]="!loginForm.valid">Login</button>
+		<p>Not a member? <a routerLink="/register">Sign up now</a></p>
+	</form>
+</div>
